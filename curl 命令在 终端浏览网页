@@ -1,0 +1,29 @@
+
+使用curl 命令在终端浏览网页：
+
+curl -v 163.com
+
+pengchao@PengChaos-MacBook-Pro ~ % curl -v 163.com
+*   Trying 123.58.180.8:80...
+* Connected to 163.com (123.58.180.8) port 80
+> GET / HTTP/1.1
+> Host: 163.com
+> User-Agent: curl/8.4.0
+> Accept: */*
+> 
+< HTTP/1.1 301 Moved Permanently
+< Server: nginx  ----------------------------------------------------可以看到后台使用的是 Nginx 作为服务器
+< Date: Sat, 04 May 2024 11:52:34 GMT
+< Content-Type: text/html
+< Content-Length: 178
+< Connection: keep-alive
+< Location: http://www.163.com/
+< 
+<html>
+<head><title>301 Moved Permanently</title></head>
+<body bgcolor="white">
+<center><h1>301 Moved Permanently</h1></center>
+<hr><center>nginx</center>
+</body>
+</html>
+* Connection #0 to host 163.com left intact
